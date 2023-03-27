@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:weatherdb
+  h2:
+    console:
+      enabled: true
+  config:
+    import: optional:file:.env[.properties]
+
+
+weather-stack:
+  api-url: http://api.weatstack.com/current
+  api-key: ${API-KEY:default}
